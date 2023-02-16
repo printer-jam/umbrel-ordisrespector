@@ -96,18 +96,3 @@ COPY --chown=root:root --from=bitcoin-core ${BITCOIN_PREFIX}/bitcoin-cli ${UMBRE
 COPY --chown=root:root --from=bitcoin-core ${BITCOIN_PREFIX}/bitcoin-tx ${UMBREL_BIN_PATH}
 COPY --chown=root:root --from=bitcoin-core ${BITCOIN_PREFIX}/bitcoin-util ${UMBREL_BIN_PATH}
 COPY --chown=root:root --from=bitcoin-core ${BITCOIN_PREFIX}/bitcoin-wallet ${UMBREL_BIN_PATH}
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-umbrel-ordisrespector/Dockerfile at main · printer-jam/umbrel-ordisrespector
