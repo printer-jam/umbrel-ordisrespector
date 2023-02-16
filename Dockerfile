@@ -1,34 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Codespaces
-Marketplace
-Explore
- 
-@printer-jam 
-printer-jam
-/
-umbrel-ordisrespector
-Public
-Cannot fork because you own this repository and are not a member of any organizations.
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-umbrel-ordisrespector/Dockerfile
-@printer-jam
-printer-jam Update Dockerfile
-Latest commit c2b3ec7 1 hour ago
- History
- 1 contributor
-98 lines (78 sloc)  3.32 KB
-
 FROM alpine:3.12.12 as bitcoin-core
 
 RUN apk add --update alpine-sdk && apk add --no-cache \
