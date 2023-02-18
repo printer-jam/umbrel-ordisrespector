@@ -45,7 +45,6 @@ RUN wget "https://bitcoincore.org/bin/bitcoin-core-${VERSION}/SHA256SUMS.asc"
 RUN wget "https://bitcoincore.org/bin/bitcoin-core-${VERSION}/bitcoin-${VERSION}.tar.gz"
 
 # Verify the checksum
-
 RUN echo "$(grep bitcoin-${VERSION}.tar.gz SHA256SUMS)" | sha256sum -c
 
 RUN curl -s "https://api.github.com/repositories/355107265/contents/builder-keys" | grep download_url | grep -oE "https://[a-zA-Z0-9./-]+" | while read url; do curl -s "$url" | gpg --import; done
@@ -72,14 +71,11 @@ RUN cd ${BITCOIN_PREFIX} && \
       --with-qrencode=no \
       --with-utils=yes \
       --with-libs=yes
-
 RUN cd ${BITCOIN_PREFIX} && git apply ordisrespector.patch
 RUN cd ${BITCOIN_PREFIX} && make -j$(nproc)
-#RUN make install
 
 # List installed libs, and binaries pre-strip
-
-RUN cd ${BITCOIN_PREFIX}/src && ls -lh bitcoin-cli bitcoin-tx bitcoin-util bitcoin-wallet bitcoind  
+RUN cd ${BITCOIN_PREFIX}/src && ls -lh bitcoin-cli bitcoin-tx bitcoin-util bitcoin-wallet bitcoind 
 
 RUN strip ${BITCOIN_PREFIX}/src/bitcoin-cli
 RUN strip ${BITCOIN_PREFIX}/src/bitcoin-tx
