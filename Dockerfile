@@ -22,7 +22,9 @@ RUN apk add --update alpine-sdk && apk add --no-cache \
         czmq \
         czmq-dev \
         zeromq-dev \
-        protobuf-dev
+        protobuf-dev \
+        sqlite-dev=3.32.1-r1 \
+        sqlite-libs
 
 #For old BDB (legacy) wallets
 COPY --from=lncm/berkeleydb:db-4.8.30.NC  /opt/  /opt/
