@@ -24,7 +24,7 @@ docker build -t ordisrespector/bitcoind:v24.0.1 .
 ``` 
 This may take a long while depending on the specs of your node, like 30+ minutes, so do maybe do it in screen or tmux or if you want to do it off your node and you know how, do that.
 
-## Backup umbrel image, and retag this imaage:
+## Backup umbrel image, and retag this image:
 
 ```sh
 /umbrelInstallFolder$ ./scripts/app compose bitcoin stop
@@ -50,7 +50,7 @@ and change the bitcoind image to remove the hash part and replace with the tag:
 
 may work, but it didn't for me. Rebooting the hardware did.
 
-## Ignore the low fee full blocks.
+## Ignore the low fee ordinal transactions.
 
 ## **Rollback**
 If it messes up another umbrel application, to revert the changes just:
