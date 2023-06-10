@@ -8,7 +8,7 @@ Based on the guide for ordisrespector for minibolt here: https://github.com/twof
 
 and
 
-Luke Cihild's alpine builds for bitcoind Docker images here: https://github.com/lukechilds/lncm-docker-bitcoind
+Luke Child's alpine builds for bitcoind Docker images here: https://github.com/lukechilds/lncm-docker-bitcoind
 
 Follow the instructions in the README.md in the major version's folder for building the image, and using it in your umbrel node.
 
